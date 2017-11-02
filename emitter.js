@@ -57,9 +57,8 @@ function getEmitter() {
                 .filter((e) => e === event || e.startsWith(event + '.'));
 
             for (let eventName of eventsNames) {
-                events[eventName] = events[eventName].filter(
-                    curEvent => curEvent.context !== context
-                );
+                events[eventName] = events[eventName].
+                    filter(curEvent => curEvent.context !== context);
             }
 
             return this;
